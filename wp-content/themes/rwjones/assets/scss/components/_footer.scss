@@ -1,0 +1,68 @@
+.site-footer{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+        margin-bottom: 40px;
+    }
+    .footer-image{
+        text-align: center;
+    }
+    .footer-nav{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include media-breakpoint-up(lg){
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .menu-footer-nav-container{
+            text-align: center;
+            border: none;
+            @include media-breakpoint-up(lg){
+                border-left: 1px solid $primary-2;
+                border-right: 1px solid $primary-2;
+            }
+            ul{
+                display: inline-flex;
+                list-style-type: none;
+                margin: 0;
+                font-size: 12px;
+                @include media-breakpoint-up(md){
+                    font-size: 16px;
+                }
+                @include media-breakpoint-up(xl){
+                    font-size: 18px;
+                }
+                li{
+                    font-weight: bold;
+                    a{
+                        color: $primary-1;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        &:hover{
+                            color: $primary-2;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .footer-copyright{
+        color: $primary-2;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid $primary-2;
+        font-size: 12px;
+        @include media-breakpoint-up(lg){
+            padding-top: 0;
+            padding-bottom: 0;
+            border: none;
+            font-size: 16px;
+        }
+        @include media-breakpoint-up(xl){
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "rankin",
+  "version": "1.0.0",
+  "description": "This is a WordPress repository configured to run on the [Pantheon platform](https://pantheon.io).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://codeserver.dev.7a158041-2c32-4299-b1bd-6fa42006b961@codeserver.dev.7a158041-2c32-4299-b1bd-6fa42006b961.drush.in:2222/~/repository.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ig": "^0.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}

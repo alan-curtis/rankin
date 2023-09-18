@@ -1,0 +1,96 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 7;
+    background-color: $white;
+    .admin-bar & {
+        top: 32px;
+      }
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+      box-shadow: 0px 4px 34px 4px rgba(0, 0, 0, 0.25);
+}
+// .contact:hover,
+// .contact:focus {
+//   box-shadow: inset 6.5em 0 0 0 var(--hover);
+// }
+// .slide_right:hover {
+//     box-shadow: inset 400px 0 0 0 $primary;
+//   }
+
+  #site-navigation{
+    #mega-menu-wrap-menu-1{
+      .mega-toggle-on{
+        border-bottom: 4px solid $primary-1 !important;
+      }
+      .mega-menu-flyout{
+        border-bottom: 4px solid $white !important;
+        &:hover{
+          border-bottom: 4px solid $primary-1 !important;
+        }
+      }
+    // #mega-menu-menu-1 > li.mega-menu-item > a.mega-menu-link {
+
+    // }
+    #mega-menu-menu-1[data-effect="fade_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu{
+      padding: 10px;
+      margin-top: 4px;
+    }
+
+    #mega-menu-menu-1 > li.mega-menu-item {
+      margin: 0 20px 0 20px;
+      @include media-breakpoint-down(xl) { 
+        margin: 0 10px 0 10px;
+      }
+
+      &:last-child{
+        background: $primary-1 !important;
+        border-radius: 8px !important;
+        border: none !important;
+        a{
+          color: $white !important;
+          height: 55px !important;
+          width: 150px;
+          padding: 15px;
+          font-weight: bold;
+          -webkit-transition: ease-out 0.4s !important;
+          -moz-transition: ease-out 0.4s !important;
+          transition: ease-out 0.4s !important;
+          border: none;
+        }
+        &:hover,&:focus{
+          border-bottom: none !important;
+         
+        }
+        .slide{
+          margin:0;
+          border: none;
+          &:hover,&:focus{
+            border-radius: 8px !important;
+            box-shadow: inset 150px 0 0 0 var(--hover);
+            text-decoration: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+  $colors: (
+    slide: rgba(0, 0, 0, 0.2)
+  );
+  
+  // Sass variables compile to a static string; CSS variables are dynamic and inherited
+    // Loop through the map and set CSS custom properties using Sass variables
+  @each $button, $color in $colors {
+    .#{$button} {
+      --color: #{$color};
+      --hover: #{adjust-hue($color, -45deg)};
+    }
+  }
+  
+  // Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
